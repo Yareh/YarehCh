@@ -1,0 +1,174 @@
+# YarehCh
+Project Website
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Week 03 : CSS</title>
+    <style> /* #0 */
+	   body { font-size:36px; }
+    </style>
+    
+    <style> /* #1 This stylesheet was made by Minhah Chavez*/
+     @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@500&display=swap");
+     body { 
+       background-color: black;
+      }
+     h1, h2, h3{
+      background-color: black;
+      color: rgb(255, 255, 255);
+      font-family: 'Bebas Neue', cursive;
+      text-align: center;
+      font-size: 65px; 
+      padding: 25px;
+      }
+     h1:hover {
+      background-color:chartreuse;
+      color: black;
+       }
+     h3:hover {
+      background-color:chartreuse;
+      color:black;
+       }
+     p{
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      text-align: center; 
+      font-size: 35px;
+     }
+     li.menuBarItem {
+      background-color: black;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      list-style: none;
+     }
+     li.menuBarItem:hover {
+      background-color: white;
+      color: black; 
+     }
+     a.highlight{
+       color: white; 
+     }
+     a.highlight:hover {
+       color: #9933ff;
+       }
+     #bottom{
+      font-family: 'Montserrat', sans-serif;
+      color: #ff33ff;
+      text-align: center;
+     }
+     #bottom{
+        width: 500px;
+        height: 299px;
+        background-image: url(giphy.gif);
+        background-size: 100%;
+        margin: 0 auto;
+     }
+
+	</style>
+    <style> /* #2 */
+	   body { font-size:12px; }
+	</style>
+    <style> /* #3 Minhah Chavez modifed this style sheet in the concerning elements: Image and colors. Besides selecting specific HEX colors for 
+    the web page, I estabilished the background color, fonts and color of the links. I added an a background for the title and an image.
+    */
+     body { 
+         background-color: #F6F7EB;
+         font-size:16px;
+         font-family: 'Courier New', monospace;
+         text-align: center;
+         text-shadow: 3px 3px 3px #ABABAB;
+       }
+       h1, h3 {
+         font-family: 'Brush Script MT', cursive;
+         font-size: 46px;  
+         text-align: center;
+         color: #3f88c5
+       }
+       li.menuBarItem {
+         background-color: #393E41;
+         color: #F6F7EB;
+         padding: 25px;
+         text-align: center;
+       }
+       li.menuBarItem:hover {
+       background-color: #E94F37;
+       }
+       #title{ 
+        background-color: lightblue;
+       }
+       .imageBox{
+        width: 500px;
+        height: 299px;
+        background-image: url(logos.png);
+        background-size: 100%;
+        margin: 0 auto;
+       }
+       a.highlight:hover {
+       color: #44BBA4;
+       } 
+	</style>
+    
+    
+   </head>
+   <body onload="disableStyles()">
+      <div class="document">
+        <div id="title">
+          <h1>Week 03 : CSS</h1>
+          <p>This page will demonstrate how to switch between different CSS stylesheets to achieve a given effect</p>
+        </div> <!--title -->
+        <div class="imageBox"></div>
+        <div class="content">
+          <div id="menuBar">
+            <ul id="menuBarList">
+              <li class="menuBarItem" onclick="applyStyle(0)">Stylesheet 1</li>
+              <li class="menuBarItem" onclick="applyStyle(1)">Stylesheet 2</li>
+              <li class="menuBarItem" onclick="applyStyle(2)">Stylesheet 3</li>
+              <li class="menuBarItem" onclick="applyStyle(3)">Stylesheet 4</li>
+              <li class="menuBarItem" onclick="disableStyles()">No Stylesheet</li>
+            </ul>
+          </div> <!-- menuBar -->
+          <div id="text">
+            <h1>Select the Stylesheet</h1>
+            <p>There are four stylesheets that you may select from. Each one will change the coloring, fonts, 
+            		and even the layout of the page.You can change the layout of this page by selecting different 
+                    stylesheets in the menu, or by selecting one of the following links:<br>
+              <a class="highlight" href="#" onclick="applyStyle(0)">Stylesheet 1</a>,
+              <a class="highlight" href="#" onclick="applyStyle(1)">Stylesheet 2</a>,
+              <a class="highlight" href="#" onclick="applyStyle(2)">Stylesheet 3</a>,
+              <a class="highlight" href="#" onclick="applyStyle(3)">Stylesheet 4</a>.
+            </p>
+             <h1>Instructions</h1>
+            <p>Please modify this page to include a description of each stylesheet, including anything clever that 
+            		you did to achieve a given effect. Please also include the contributors to a given stylesheet.</p>
+         </div> <!-- text -->
+         <div id="sidebar">
+           <h3>Grading</h3>
+            <p>In order to get full credit for this assignment, you will need to demonstrate what you have learned 
+            		and how you helped your classmates. This means your contribution needs to be briefly described 
+                    on the page.</p>
+          </div> <!--sidebar -->
+        </div> <!-- content -->
+        <div id="bottom">Submit this assignment by </div>
+      </div> <!-- document -->
+      
+      <script>
+	  <!-- DISABLE STYLES: This function turns off the four stylesheets -->
+	    function disableStyles() 
+		{
+		  document.styleSheets[0].disabled = true;
+		  document.styleSheets[1].disabled = true;
+		  document.styleSheets[2].disabled = true;
+		  document.styleSheets[3].disabled = true;
+		}
+		<!-- APPLY STYLES: This function turns off all four stylesheets, then turns one back on -->
+		function applyStyle(i)
+		{
+			disableStyles();
+			document.styleSheets[i].disabled = false;
+		}
+	  </script>
+   </body>
+</html>
